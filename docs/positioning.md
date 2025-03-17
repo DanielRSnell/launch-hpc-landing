@@ -51,7 +51,7 @@ LaunchHPC delivers comprehensive infrastructure solutions to power today's most 
 
 **End-to-end visibility across distributed computing environments.**
 
-- **Real-time Performance Monitoring**: Track GPU/CPU utilization, memory, storage, and network metrics
+- **Real-time Performance**: Track GPU/CPU utilization, memory, storage, and network metrics
 - **Application Insights**: Measure throughput, latency, and resource efficiency for each workload
 - **Cost Attribution**: Assign and track resource consumption by project, team, or application
 - **Anomaly Detection**: Proactive identification of system issues before they impact production

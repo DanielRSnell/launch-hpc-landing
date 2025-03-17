@@ -22,7 +22,7 @@ list:
     title: Technology Leadership
     description: Continuous access to cutting-edge hardware and software innovations, including direct integration with NVIDIA DGX Cloud for AI supercomputing.
     image: "/images/product/new-workflow3.png"
-  - icon: "/images/icons/svg/customer.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
+  - icon: "/images/icons/svg/tools.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
     title: Strategic Business Applications
     description: Power AI model development, scientific research, financial modeling, and enterprise data analytics with optimized infrastructure and workflows.
     image: "/images/product/Dashboard.png"
