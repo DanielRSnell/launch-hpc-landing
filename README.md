@@ -6,7 +6,7 @@ A modern, responsive Astro-based website theme for LaunchHPC, a company providin
 
 This theme is built using Astro framework with React components, Tailwind CSS, and various modern web technologies to create a fast, responsive, and visually appealing website for LaunchHPC's enterprise offerings.
 
-## Features
+## Features - Change
 
 - **Modern Tech Stack**: Built with Astro, React, and Tailwind CSS
 - **Responsive Design**: Fully responsive layout that works on all device sizes
