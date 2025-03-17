@@ -1,8 +1,8 @@
 ---
 - title: Simplified Deployment & Management
   images:
-    - "/images/product/New Workflow1.png"
-    - "/images/product/New Workflow Success.png"
+    - "/images/product/new-workflow1.png"
+    - "/images/product/new-workflow-success.png"
   description: From proof-of-concept to production-scale compute in hours, not months. Deploy pre-configured environments with popular frameworks like PyTorch, TensorFlow, and NVIDIA AI Enterprise with containerized workflows.
   list:
     - Pre-configured Environments
@@ -15,8 +15,8 @@
     link: "/optimize/"
 - title: Advanced Workload Optimization
   images:
-    - "/images/product/Workflow Configuration.png"
-    - "/images/product/Workflow Overview .png"
+    - "/images/product/workflow-configuration.png"
+    - "/images/product/workflow-overview.png"
   description: Maximize performance and efficiency across your entire AI and HPC portfolio with workload profiling, compute acceleration, pipeline automation, and resource forecasting.
   list:
     - Workload Profiling
@@ -29,8 +29,8 @@
     link: "/optimize/"
 - title: Comprehensive Observability
   images:
-    - "/images/product/Execution with Logging.png"
-    - "/images/product/Workflow History.png"
+    - "/images/product/execution-with-logging.png"
+    - "/images/product/workflow-history.png"
   description: End-to-end visibility across distributed computing environments with real-time performance monitoring, application insights, cost attribution, and anomaly detection.
   list:
     - Real-time Performance Monitoring
