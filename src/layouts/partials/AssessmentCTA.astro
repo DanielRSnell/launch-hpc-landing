@@ -1,0 +1,94 @@
+---
+import AnimatedAnchor from "@/components/AnimatedAnchor.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+// Get the assessment CTA data from the assessmentCtaSection collection
+const assessmentCta = await getEntry("assessmentCtaSection", "assessment-cta");
+const { title, description, image, bg_image, benefits, button, enable } = assessmentCta?.data || {
+  title: "",
+  description: "",
+  image: "",
+  bg_image: "",
+  benefits: [],
+  button: { enable: false, label: "", link: "" },
+  enable: false
+};
+---
+
+{
+  enable && (
+    <section class="section">
+      <div class="container">
+        <div class="row items-center">
+          <div class="lg:col-6" data-aos="fade-right-sm">
+            <div class="relative">
+              <ImageMod
+                src={image}
+                height={600}
+                width={800}
+                alt={title}
+                class="rounded-lg border border-white/10 shadow-2xl"
+              />
+              <div class="absolute -bottom-6 -left-6 -z-10 h-full w-full rounded-lg bg-gradient-to-tr from-primary/40 to-secondary/40 blur-[30px] opacity-50"></div>
+            </div>
+          </div>
+          <div class="mt-10 lg:col-6 lg:mt-0 lg:ps-16" data-aos="fade-left-sm">
+            {title && (
+              <h2 class="has-gradient mb-6" set:html={markdownify(title)} />
+            )}
+            {description && (
+              <p
+                class="mb-8 text-lg/[inherit] opacity-80"
+                set:html={markdownify(description)}
+              />
+            )}
+            
+            {benefits && benefits.length > 0 && (
+              <div class="mb-10 space-y-5">
+                {benefits.map((benefit) => (
+                  <div class="flex items-start gap-4">
+                    {benefit.icon && (
+                      <div class="flex h-12 w-12 min-w-12 items-center justify-center rounded-lg bg-gradient-to-b from-white/10 to-slate-800/25">
+                        <ImageMod
+                          class="h-5 w-5"
+                          src={benefit.icon}
+                          alt={`icon related to ${benefit.title}`}
+                        />
+                      </div>
+                    )}
+                    <div>
+                      {benefit.title && (
+                        <h3
+                          class="tracking-none mb-2 text-lg/none"
+                          set:html={markdownify(benefit.title)}
+                        />
+                      )}
+                      {benefit.description && (
+                        <p
+                          class="opacity-70"
+                          set:html={markdownify(benefit.description)}
+                        />
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {button && button.enable && (
+              <AnimatedAnchor
+                label={button.label}
+                link={button.link}
+                className="btn btn-primary rounded-full"
+                set:html={button.label}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

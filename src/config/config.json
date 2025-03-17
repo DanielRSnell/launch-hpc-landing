@@ -1,0 +1,46 @@
+{
+  "site": {
+    "title": "Launch by Thisway Global",
+    "base_url": "https://launch.thiswayglobal.com",
+    "base_path": "/",
+    "trailing_slash": true,
+    "favicon": "/images/_brand/icon.png",
+    "logo": "/images/_brand/logo.svg",
+    "logo_width": "124px",
+    "logo_height": "26px",
+    "logo_footer": "/images/_brand/logo.svg",
+    "logo_footer_width": "225px",
+    "logo_footer_height": "48px",
+    "logo_text": "Launch"
+  },
+
+  "settings": {
+    "pagination": 4,
+    "summary_length": 270,
+    "blog_folder": "blog"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Copyright {year} Launch by Thisway Global. All Rights Reserved"
+  },
+
+  "subscription": {
+    "enable": true,
+    "action": "#",
+    "title": "Stay Updated on Enterprise AI & HPC",
+    "description": "Receive the latest insights on high-performance computing and AI infrastructure optimization"
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Schedule Assessment",
+    "link": "/contact/"
+  },
+
+  "metadata": {
+    "meta_author": "Launch",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Enterprise AI & HPC Infrastructure Solutions"
+  }
+}

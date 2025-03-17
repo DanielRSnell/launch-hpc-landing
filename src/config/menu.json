@@ -1,0 +1,25 @@
+{
+  "main": [
+   
+  ],
+  "footer": [
+    { "name": "Privacy Policy", "url": "/privacy-policy/" },
+    { "name": "Terms & Conditions", "url": "/terms-conditions/" }
+  ],
+  "company": [
+    { "name": "Optimize", "url": "/optimize/" },
+    { "name": "DGX Cloud", "url": "/dgx-cloud/" }
+  ],
+  "product": [
+    { "name": "Optimize", "url": "/optimize/" },
+    { "name": "DGX Cloud", "url": "/dgx-cloud/" }
+  ],
+  "resources": [
+    { "name": "Optimize", "url": "/optimize/" },
+    { "name": "DGX Cloud", "url": "/dgx-cloud/" }
+  ],
+  "services": [
+    { "name": "Schedule Technical Assessment", "url": "/contact/" },
+    { "name": "Contact", "url": "/contact/" }
+  ]
+}
