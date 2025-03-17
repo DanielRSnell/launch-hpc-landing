@@ -18,7 +18,7 @@ list:
     title: Enterprise Collaboration
     description: Secure workspaces with fine-grained access controls, Git integration, artifact management, and built-in knowledge sharing features.
     image: "/images/product/new-workflow2.png"
-  - icon: "/images/icons/svg/cart.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
+  - icon: "/images/icons/svg/grow.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
     title: Technology Leadership
     description: Continuous access to cutting-edge hardware and software innovations, including direct integration with NVIDIA DGX Cloud for AI supercomputing.
     image: "/images/product/new-workflow3.png"
