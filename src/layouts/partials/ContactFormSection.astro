@@ -62,7 +62,7 @@ const { contact_form } = (
             data-aos="fade-left-sm"
             data-aos-delay="200">
             <div class="rounded-2xl border border-white/5 bg-dark p-5 md:p-16">
-              <form class="row g-4" action={contact_form_action} method="post">
+              <form id="contact-form" class="row g-4">
                 <div class="lg:col-6">
                   <label for="first-name" class="form-label">
                     First Name <span class="text-red-500">*</span>
@@ -165,6 +165,7 @@ const { contact_form } = (
                 </div>
                 <div class="col-12">
                   <button
+                    id="submit-button"
                     type="submit"
                     class="btn rounded-full border-border text-white">
                     <span class="value">
@@ -173,6 +174,14 @@ const { contact_form } = (
                       </span>
                     </span>
                   </button>
+                </div>
+                <div id="form-status" class="col-12 mt-4 hidden">
+                  <div id="success-message" class="text-green-500 hidden">
+                    Thank you! Your message has been submitted successfully.
+                  </div>
+                  <div id="error-message" class="text-red-500 hidden">
+                    There was a problem submitting your form. Please try again.
+                  </div>
                 </div>
               </form>
             </div>
@@ -187,3 +196,71 @@ const { contact_form } = (
     </section>
   )
 }
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get form elements
+    const contactForm = document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-button');
+    const formStatus = document.getElementById('form-status');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    
+    if (contactForm && submitButton && formStatus && successMessage && errorMessage) {
+      // Add click event to the submit button
+      submitButton.addEventListener('click', function(e) {
+        // Prevent the default form submission
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        const formDataObj = {};
+        
+        // Convert FormData to object
+        formData.forEach(function(value, key) {
+          formDataObj[key] = value;
+        });
+        
+        // Send data to webhook
+        fetch('https://api.umbral.ai/webhook/3fdb6c95-c301-455e-9bde-dffbe4590639', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formDataObj)
+        })
+        .then(function(response) {
+          if (response.ok) {
+            // Show success message
+            formStatus.classList.remove('hidden');
+            successMessage.classList.remove('hidden');
+            errorMessage.classList.add('hidden');
+            
+            // Reset form fields
+            contactForm.querySelectorAll('input, textarea, select').forEach(function(field) {
+              field.value = '';
+            });
+          } else {
+            // Show error message
+            formStatus.classList.remove('hidden');
+            errorMessage.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+            console.error('Form submission failed');
+          }
+        })
+        .catch(function(error) {
+          // Show error message
+          formStatus.classList.remove('hidden');
+          errorMessage.classList.remove('hidden');
+          successMessage.classList.add('hidden');
+          console.error('Error submitting form:', error);
+        });
+      });
+      
+      // Also handle the form submit event as a backup
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+      });
+    }
+  });
+</script>
