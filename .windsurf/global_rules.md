@@ -25,7 +25,7 @@ The LaunchHPC site should focus on the following key elements:
    - Elastic scaling between on-premise and cloud solutions
    - Advanced workload optimization capabilities
    - Comprehensive real-time observability
-   - NVIDIA DGX Cloud integration and reselling
+   - NVIDIA DGX Cloud Partnership and reselling
    - Enterprise-grade security and compliance
 
 3. **Target Industries**: While previously focused on education, now target:

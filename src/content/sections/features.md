@@ -8,7 +8,7 @@
     - Pre-configured Environments
     - Containerized Workflows
     - Dynamic Resource Management
-    - NVIDIA DGX Cloud Integration
+    - NVIDIA DGX Cloud Partnership
   button:
     enable: true
     label: "Learn More"
